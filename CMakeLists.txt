@@ -54,7 +54,7 @@ if (sctp_invariants)
 	add_definitions(-DINVARIANTS)
 endif ()
 
-option(sctp_debug "Provide debug information" 1)
+option(sctp_debug "Provide debug information" 0)
 if (sctp_debug)
 	add_definitions(-DSCTP_DEBUG)
 endif ()
@@ -73,7 +73,7 @@ option(sctp_werror "Treat warning as error" 1)
 
 option(sctp_build_shared_lib "Build USRSCTP as shared library" 0)
 
-option(sctp_build_programs "Build example programs" 1)
+option(sctp_build_programs "Build example programs" 0)
 
 option(sctp_sanitizer_address "Compile with address sanitizer" 0)
 
