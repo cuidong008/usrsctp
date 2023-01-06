@@ -86,7 +86,7 @@ debug_set_target(FILE *fp);
 
 #define FUZZER_ASSERT(x) if (!(x)) { printf("USRSCTP assertion failed: function %s, file %s, line %d.\n", __PRETTY_FUNCTION__, __FILE__, __LINE__); abort(); }
  
-#define SIG_CANCEL_SIGNAL SIGUSR1
+#define SIG_CANCEL_SIGNAL 0
 static inline int pthread_cancel(pthread_t thread) {
 	return pthread_kill(thread, SIG_CANCEL_SIGNAL);
 }
